@@ -7,7 +7,7 @@ body {
     /*  Velikost pisave lahko določimo na več načinov.
         Spodnji jo določi glede na velikost pisave v znački, ki je na enem nivoju višje;
         če velikost pisave na zgornjem nivoju ni določena, se določi glede na privzeto velikost pisave v brskalniku. */
-    font-size: 1.2em;
+    font-size: 0.9em;
     /*  Višina vrstice  */
     line-height: 1.5;
     /*  Največja širina vsebine spletne strani  */
@@ -16,7 +16,8 @@ body {
         preostanek pa se enakomerno razdeli med levim in desnim robom  */
     margin: auto;
     /*  Obojestranska poravnava besedila    */
-    text-align: justify;
+    text-align: left;
+    width: 40%;
 }
 
 /*  Odstranimo podčrtovanje povezav in outline (ta se včasih pokaže kot kvadratek okrog povezave)  */
@@ -30,4 +31,26 @@ a:active { color:#990000; outline:none; }
 code {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     color: #009966;
+}
+
+h1 {
+    color:#330066
+}
+
+h2 {
+    margin-top: 2em;
+    border-top: 1px solid #AAAAAA;
+    padding-top: 0.5em;
+}
+
+#uvod {
+    padding: 2em;
+    background-color: rgb(51, 0, 102, 0.1);
+}
+
+.slika img {
+   width: 50%; 
+   height: auto; 
+   float: right; 
+   margin-left: 2em;
 }
