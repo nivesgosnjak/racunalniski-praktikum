@@ -53,4 +53,10 @@ h2 {
    height: auto; 
    float: right; 
    margin-left: 2em;
+   border-radius: 5%;
+}
+
+.slika p:last-child {
+    font-size: 0.8em;
+    padding-top: 0%;
 }
