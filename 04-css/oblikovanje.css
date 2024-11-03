@@ -7,7 +7,7 @@ body {
     /*  Velikost pisave lahko določimo na več načinov.
         Spodnji jo določi glede na velikost pisave v znački, ki je na enem nivoju višje;
         če velikost pisave na zgornjem nivoju ni določena, se določi glede na privzeto velikost pisave v brskalniku. */
-    font-size: 0.9em;
+    font-size: 1.2em;
     /*  Višina vrstice  */
     line-height: 1.5;
     /*  Največja širina vsebine spletne strani  */
@@ -17,7 +17,7 @@ body {
     margin: auto;
     /*  Obojestranska poravnava besedila    */
     text-align: left;
-    width: 40%;
+    ;
 }
 
 /*  Odstranimo podčrtovanje povezav in outline (ta se včasih pokaže kot kvadratek okrog povezave)  */
@@ -48,12 +48,17 @@ h2 {
     background-color: rgb(51, 0, 102, 0.1);
 }
 
+.slika {
+    width:40%;
+    font-size: 0.9em;
+    float: right; 
+    margin-left: 2em;
+    border-radius: 5%;
+}
+
 .slika img {
-   width: 50%; 
+   width: 100%; 
    height: auto; 
-   float: right; 
-   margin-left: 2em;
-   border-radius: 5%;
 }
 
 .slika p:last-child {
