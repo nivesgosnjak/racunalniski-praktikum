@@ -182,7 +182,7 @@ krši nobenega izmed zgoraj naštetih načel, a še zdaleč ne ustreza merilom k
 
 Algoritem je najbolje implementirati tako, da do kršenja strogih omejitev sploh ne more priti.
 Tabela zasedenosti je dober primer pametne implementacije, saj tako že v osnovi  preprečujemo
-dodeljevanje t.i. prekrivanj. Če želi algoritem dodeliti predavanje določeni predavalnici,
+dodeljevanje t.i.~prekrivanj. Če želi algoritem dodeliti predavanje določeni predavalnici,
 mora najprej v tabeli zasedenosti preveriti, če je v tistem terminu le-ta še na voljo,
 sicer se vstavljanje ne izvede.
 
@@ -321,28 +321,29 @@ Naslednje vrstice bodo pojasnile, kako implementirati postopek požrešne metode
 % (Nekoliko lepše izgleda, če v prazno vrstico vstavite % za komentar.)
 Zgoraj predstavljena shema je le grob opis postopka, ki ga nad urnikom izvaja požrešna metoda,
 zato si je smiselno podrobneje ogledati posamezne korake.
-
-   Z zanko se sprehodimo po vektorju vseh predmetov. Predmet na $i$-tem koraku
+\begin{enumerate}
+   \item Z zanko se sprehodimo po vektorju vseh predmetov. Predmet na $i$-tem koraku
    označimo s $\textnormal{predmet}_i$.
 
-   Naslednja vgnezdena zanka nas popelje po vseh predavalnicah. Predavalnico na
+   \item Naslednja vgnezdena zanka nas popelje po vseh predavalnicah. Predavalnico na
    $j$-tem koraku označimo s $\textnormal{predavalnica}_j$.
 
-   Za vse proste termine $\textnormal{predavalnice}_j$ izračunamo ceno vstavljanja
+   \item Za vse proste termine $\textnormal{predavalnice}_j$ izračunamo ceno vstavljanja
    $\textnormal{srečanja}_i$, ki ga sestavlja $\textnormal{predmet}_i$, profesor, ki ta predmet predava,
    ter skupina, kateri je predmet namenjen.
 
-   Če je trenutna cena boljša od najboljše dosedanje, potem najboljša dosedanja
+   \item Če je trenutna cena boljša od najboljše dosedanje, potem najboljša dosedanja
    dobi vrednost trenutne. Hkrati si zapomnimo, za kateri termin smo izračunali ceno
    vstavljanja, da bomo $\textnormal{predmet}_i$ na koncu vstavili v termin z najboljšo
    ceno vstavljanja.
 
-   Ko preverimo vse proste termine vseh predavalnic, vstavimo $\textnormal{srečanje}_i$
+   \item Ko preverimo vse proste termine vseh predavalnic, vstavimo $\textnormal{srečanje}_i$
    v termin z najboljšo ceno.
 
-   Sedaj se ponovno vrnemo na začetek in pogledamo najugodnejši termin za naslednji
+   \item Sedaj se ponovno vrnemo na začetek in pogledamo najugodnejši termin za naslednji
    predmet. Postopek ponavljamo, dokler se zunanja zanka, ki se sprehaja po vseh predmetih,
    ne zaključi. S tem smo namreč v urnik vstavili vse predmete.
+\end{enumerate}
 
 \subsection{Optimizacijske metode} % podrazdelek
 
