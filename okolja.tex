@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+%We can define the environment in the preamble
+\newenvironment{mijau}[2][This is a box]
+    {\begin{center}
+    Argument 1 (\#1)=#1\\[1ex]
+    \begin{tabular}{|p{0.9\textwidth}|}
+    \hline\\
+    Argument 2 (\#2)=#2\\[2ex]
+    }
+    { 
+    \\\\\hline
+    \end{tabular} 
+    \end{center}
+    }
+\newenvironment{magic}[3]
+    {\begin{table}
+    \centering
+    \caption{#1}
+    \label{#2}
+    \begin{tabular}{|*{#3}{c|}}
+        \hline
+    }
+    {\end{tabular}
+    \end{table}
+    }
+
+\begin{document}
+\textbf{Example 1}: Use the default value for the first argument:
+ 
+\begin{mijau}{Some preliminary text}
+This text is \textit{inside} the environment.
+\end{mijau}
+
+This text is \textit{outside} the environment.
+
+\vskip12pt
+
+\textbf{Example 2}: Provide a value for the first argument:
+ 
+\begin{mijau}[This is not the default value]{Some more preliminary text}
+This text is still \textit{inside} the environment.
+\end{mijau}
+
+This text is also \textit{outside} the environment.
+
+\begin{magic}{mijau}{tab:3}{3}
+    3 & 6 & 6 \\\hline
+    3 & 6 & 6 \\\hline
+    3 & 6 & 6 \\\hline
+\end{magic}
+
+\end{document}
