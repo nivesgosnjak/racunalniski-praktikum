@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage[dvipsnames]{xcolor}
 % Definicija okolij izrek, posledica
 {\theoremstyle{plain}
 \newtheorem{izrek}{Izrek}
@@ -23,7 +24,7 @@
 }
 
 \newenvironment{magic}[3]
-   {\begin{table}[ht!]
+   {\begin{table}[!ht]
    \large
    \centering
    \caption{#1}
@@ -91,7 +92,7 @@ Prirejeno iz virov:
 \section{Uvod}
 
 \begin{definicija}
-   \emph{Magični kvadrat} reda $n$ je nabor $n^2$ različnih števil,
+   \textcolor{BrickRed}{\emph{Magični kvadrat}} reda $n$ je nabor $n^2$ različnih števil,
    ki so razvrščena v kvadratno tabelo tako, da vedno dobimo enako vsoto,
    če seštejemo vsa števila poljubne vrstice, vsa števila poljubnega
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
@@ -107,7 +108,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}.
 
 
 \begin{definicija}
-   Magični kvadrat reda $n$ je \emph{normalen}, če v njem nastopajo števila
+   Magični kvadrat reda $n$ je \textcolor{BrickRed}{\emph{normalen}}, če v njem nastopajo števila
    \begin{equation}
       \label{eq:numbers} 
       1, 2, 3, \ldots, n^2-1, n^2.
@@ -125,7 +126,7 @@ Poleg normalnih magičnih kvadratov so zanimivi tudi magični kvadrati praštevi
 \subsection{Kvadrat ">Lo Shu"<}
 
 Kitajska literatura iz časa vsaj 2800 let pred našim štetjem govori o legendi
-\emph{Lo Shu} -- ">zvitek reke Lo"<. V antični Kitajski je prišlo do
+\textcolor{BrickRed}{\emph{Lo Shu}} -- ">zvitek reke Lo"<. V antični Kitajski je prišlo do
 silne poplave. Ljudje so skušali rečnemu bogu narasle reke Lo ponuditi daritev,
 da bi pomirili njegovo jezo. Iz vode se je prikazala želva z zanimivim vzorcem
 na oklepu: v tabeli velikosti tri krat tri so bila predstavljena števila, tako
@@ -151,7 +152,7 @@ v številnih kulturah, npr.\ v Egiptu in Indiji, vklesane v kamen ali
 kovino, uporabljane kot talismane za dolgo življensko dobo in v
 izogib boleznim.
 
-\emph{Kubera-Kolam} je talna poslikava, ki se uporablja v Indiji, in je v
+\textcolor{BrickRed}{\emph{Kubera-Kolam}} je talna poslikava, ki se uporablja v Indiji, in je v
 obliki magičnega kvadrata reda 3. Ta je v bistvu enak kot kvadrat
 Lo Shu, vendar je vsako število povečano za 19.
 
@@ -202,14 +203,14 @@ simetričnih parov ($2+8+9+15$ in $3+5+12+14$), in še na nekaj drugih načinov.
    5 & 10 & 11 &  8 \\\hline
    9 &  6 &  7 & 12 \\\hline
 \end{magic}
-Pasijonska fasada na katedrali Sagrada família v Barceloni
+\textbf{Pasijonska fasada na katedrali Sagrada família v Barceloni}
 (glej sliko \ref{fig:sagrada} za fotografijo) vsebuje magični kvadrat reda 4.
 
 
 \begin{figure}[ht!]
    \centering
    \caption{Pasijonska fasada, Sagrada Família}
-   \includegraphics{sagrada.png}
+   \includegraphics[width=4.5cm]{sagrada.png}
    \label{fig:sagrada}
 \end{figure}
 
@@ -232,7 +233,7 @@ in zato kvadrat ni normalen.
 
 \begin{definicija}
       Vsoto ene vrstice, enega stolpca ali ene od glavnih diagonal
-      v magičnem kvadratu imenujemo \emph{magična konstanta}.
+      v magičnem kvadratu imenujemo \textcolor{BrickRed}{\emph{magična konstanta}}.
 \end{definicija}
 
 
@@ -265,7 +266,7 @@ Kvadratu v tabeli \ref{table:kubera} ustrezata konstanti $A=20$ in $D=1$.
 \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda $n$ odštejemo
       od števila $n^2+1$, dobimo nov magični kvadrat, ki je prvotnemu
-      \emph{komplementaren}.
+      \textcolor{BrickRed}{\emph{komplementaren}}.
 \end{definicija}
 
 Na primer, magičnemu kvadratu Lo Shu (glej tabelo \ref{table:durer}) priredimo
@@ -360,9 +361,11 @@ magični kvadrati redov 5, 6 in 9.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+
 
 % Tu vstavite bibliografijo
+\pagebreak
+\bigskip
 \bibliographystyle{plain}
 \bibliography{magic.bib}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
