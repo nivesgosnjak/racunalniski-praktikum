@@ -1,4 +1,37 @@
-\documentclass{article}
+\documentclass{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+
+\usepackage{pgfpages}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{predavanja}
+
+\setbeameroption{hide notes}  
+\mode<presentation>
+\usepackage{palatino}
+\usefonttheme{serif}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]{}
+
+% Definicija okolij izrek, posledica
+{\theoremstyle{plain}
+\newtheorem{izrek}{Izrek}
+\newtheorem{posledica}[izrek]{Posledica}
+\newtheorem{dokaz}[izrek]{Dokaz izreka}
+}
+
+% Definicija okoli za definicije in vaje
+{\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}
+\newtheorem{vaja}{Vaja}
+}
+
 % Naloga 1.3.1: Za dokument uporabite razred `beamer'.
 % Ne dodajajte nastavitve za velikost pisave, kot je bila v datoteki `5-prosojnice.tex`.
 
@@ -7,7 +40,10 @@
 % Naloga 1.3.3: definirajte okolji `definicija' in `izrek'.
 % Namig: z iskanjem po datotekah (Ctrl+Shift+F oz. Cmd+Shift+F) 
 % poiščite niz `{definicija}' ali niz `{izrek}'.
-
+\title{Matematični izrazi in uporaba paketa \texttt{beamer}}
+\subtitle{\emph{Matematičnihn} nalog ni treba reševati!}
+\author{Fakulteta za matematiko in fiziko}
+\date{}
 \begin{document}
 
 % Naloga 1.3.4: pripravite naslovno stran z vsebino:
@@ -27,18 +63,37 @@
 %    določite, da naj se kazalo vsebine odkriva postopoma.
 %    Poglejte, kako deluje ta ukaz.
 % 3. Ker ni videti preveč lepo, pomožni parameter zakomentirajte.
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Kratek pregled}
+    \tableofcontents
+\end{frame}
 
 \section{Paket \texttt{beamer}}
+\frame{\sectionpage}
+\input{prosojnice/1-paket-beamer.tex}
+
+
 
 \section{Paketa \texttt{amsmath} in \texttt{amsfonts}}
+\frame{\sectionpage}
+\input{prosojnice/2-paketa-amsmath-amsfonts.tex}
+
 
 \section[Matematika, 1. del\\\large{Analiza, logika, množice}]{Matematika, 1. del}
+\frame{\sectionpage}
 \input{prosojnice/3-analiza-logika-mnozice.tex}
 
 \section{Stolpci in slike}
+\frame{\sectionpage}
 
 \section{Paket \texttt{beamer} in tabele}
+\frame{\sectionpage}
 
 \section[Matematika, 2. del\\\large{Zaporedja, algebra, grupe}]{Matematika, 2. del}
+\frame{\sectionpage}
 
 \end{document}
