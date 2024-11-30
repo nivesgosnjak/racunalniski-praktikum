@@ -11,7 +11,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{math}
-
+\usetikzlibrary{backgrounds}
 \usepackage{pgfplots}
 \usepgfplotslibrary{external}
 
@@ -25,13 +25,13 @@
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{footline}[frame number]{}
 
+\definecolor{bes}{RGB}{255,247,203}
 % Definicija okolij izrek, posledica
 {\theoremstyle{plain}
 \newtheorem{izrek}{Izrek}
 \newtheorem{posledica}[izrek]{Posledica}
 \newtheorem{dokaz}[izrek]{Dokaz izreka}
 }
-
 % Definicija okoli za definicije in vaje
 {\theoremstyle{definition}
 \newtheorem{definicija}{Definicija}
